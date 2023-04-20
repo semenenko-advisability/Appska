@@ -1,3 +1,25 @@
+@font-face {
+  font-family: "Gotham Pro";
+  font-display: swap;
+  src: url("../fonts/gothampro_light.ttf") format("TrueType");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Gotham Pro";
+  font-display: swap;
+  src: url("../fonts/gothampro_medium.ttf") format("TrueType");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham Pro";
+  font-display: swap;
+  src: url("../fonts/gothampro_bold.ttf") format("TrueType");
+  font-weight: 700;
+  font-style: normal;
+}
+/* < --- VARIABLES --- > */
+/* < --- RESET CSS --- > */
 * {
   padding: 0px;
   margin: 0px;
@@ -11,7 +33,9 @@
 }
 
 /* Links */
-a, a:link, a:visited {
+a,
+a:link,
+a:visited {
   text-decoration: none;
 }
 
@@ -20,16 +44,28 @@ a:hover {
 }
 
 /* Common */
-aside, nav, footer, header, section, main {
+aside,
+nav,
+footer,
+header,
+section,
+main {
   display: block;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-size: inherit;
   font-weight: inherit;
 }
 
-ul, ul li {
+ul,
+ul li {
   list-style: none;
 }
 
@@ -37,7 +73,8 @@ img {
   vertical-align: top;
 }
 
-img, svg {
+img,
+svg {
   max-width: 100%;
   height: auto;
 }
@@ -47,7 +84,10 @@ address {
 }
 
 /* Form */
-input, textarea, button, select {
+input,
+textarea,
+button,
+select {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -58,7 +98,8 @@ input::-ms-clear {
   display: none;
 }
 
-button, input[type=submit] {
+button,
+input[type=submit] {
   display: inline-block;
   box-shadow: none;
   background-color: transparent;
@@ -66,8 +107,10 @@ button, input[type=submit] {
   cursor: pointer;
 }
 
-input:focus, input:active,
-button:focus, button:active {
+input:focus,
+input:active,
+button:focus,
+button:active {
   outline: none;
 }
 
@@ -82,4 +125,100 @@ label {
 
 legend {
   display: block;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* < ---/ RESET CSS /--- > */
+body {
+  color: #ffffff;
+  font-family: "Gotham Pro";
+  font-weight: 300;
+  font-size: 14px;
+}
+
+a {
+  color: #ffffff;
+}
+
+/* < --- HEADER --- > */
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background: #0e0e0e;
+  padding: 65px 0;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+.button {
+  border: 1px solid #ffffff;
+  border-radius: 142px;
+  padding: 15px 32px;
+}
+.button:hover {
+  text-decoration: underline;
+  background-color: #160598;
+  border: 1px solid #160598;
+  text-decoration: none;
+  transition-property: background-color, border;
+  transition-duration: 0.3s;
+}
+
+/* < ---/ HEADER /--- > */
+/* < --- FLOW --- > */
+.flow {
+  background-color: #0e0e0e;
+  text-align: center;
+}
+.flow__title {
+  position: relative;
+  font-size: 70px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.177em;
+  letter-spacing: 0.03em;
+  vertical-align: sub;
+}
+.flow__title > .text-accent {
+  position: relative;
+  z-index: 0;
+}
+.flow__title > .text-accent::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 4.9em;
+  height: 0.957em;
+  background-color: #ff5a66;
+  left: 50%;
+  top: calc(50% - 0.09em);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 0.829em;
+}
+.flow__title > .arrow {
+  display: inline-block;
+  width: 49px;
+  aspect-ratio: 1;
+  background-image: url("../src/icons/arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+/* < ---/ FLOW /--- > */

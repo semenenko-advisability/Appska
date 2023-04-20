@@ -51,11 +51,11 @@
 pages:
   stage: deploy
   script:
-  - mkdir .private
-  - cp -r * .private
-  - mv .private private
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
   artifacts:
     paths:
-    - private
+    - public
   only:
   - main
